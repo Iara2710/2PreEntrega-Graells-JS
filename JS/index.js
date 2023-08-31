@@ -77,7 +77,7 @@ function createBookCard(book) {
             </div>
         </div>
     </div>
-  `;
+  `
 }
 
 if (window.location.href.includes('shoppingCart.html')) {
@@ -125,7 +125,8 @@ function createCardBookCard(book) {
             <td>${book.name}</td>
             <td>${book.quantity}</td>
             <td>${book.price}</td>
-            <td>${book.price * book.cuantiti}</td>
+            <td>${book.price * book.quantity}</td>
+
             <td>
                 <button class="btn btn-danger" onclick="deleteToCart(${book.id})">Eliminar</button>
             </td>
