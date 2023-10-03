@@ -1,4 +1,3 @@
-
 .nav-container {
     position: sticky;
     z-index: 3;
@@ -21,7 +20,7 @@
 }
 
 
-/* shop content */ 
+/* shop content */
 .shop-content {
     display: flex;
     justify-content: space-around;
@@ -39,7 +38,7 @@
     font-family: arial;
 }
 
-.card > img {
+.card>img {
     width: 90%;
     height: 250px;
 }
@@ -65,7 +64,7 @@
     opacity: 0.7;
 }
 
-/* modal */ 
+/* modal */
 .modal-container {
     width: 80%;
     margin: 0 10%;
@@ -85,7 +84,8 @@
     scrollbar-color: none;
 }
 
-.modal-container::-webkit-scrollbar { /*quitar barra de scroll*/
+.modal-container::-webkit-scrollbar {
+    /*quitar barra de scroll*/
     display: none;
 }
 
@@ -93,7 +93,7 @@
     display: flex;
     justify-content: space-around;
     background-color: #0a0909;
-    color:#fff;
+    color: #fff;
     width: 100%;
 }
 
@@ -109,16 +109,16 @@
     cursor: pointer;
 }
 
-.modal-container > modal-content {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   align-items: center;
-   width: 70%; 
-   margin: 10px;
+.modal-container>modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
 }
 
-.modal-container > div > img {
+.modal-container>div>img {
     height: 120px;
     width: 120px;
 }
@@ -141,4 +141,13 @@
     right: 14px;
     position: absolute;
     display: none;
+}
+
+/* botones sumar/restar */
+.sumar {
+    cursor: pointer;
+}
+
+.restar {
+    cursor: pointer;
 }

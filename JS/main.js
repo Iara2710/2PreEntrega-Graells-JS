@@ -3,100 +3,102 @@ const verCarrito = document.getElementById("verCarrito")
 const modalContainer = document.getElementById("modal-container")
 const cantidadCarrito = document.getElementById("cantidadCarrito")
 
-const productos = [
-    {
-        id: 1,
-        titulo: "El Gran Gatsby",
-        autor: "F. Scott Fitzgerald",
-        genero: "Novela, Ficción",
-        descripcion: "La historia del millonario Jay Gatsby y su obsesión por el pasado.",
-        rutaImagen: "https://m.media-amazon.com/images/I/61hR5wwWGuS._AC_UF1000,1000_QL80_.jpg",
-        precio: 2000,
-        unidades: 1
-    },
-    {
-        id: 2,
-        titulo: "Cien años de soledad",
-        autor: "Gabriel García Márquez",
-        genero: "Novela",
-        descripcion: "La saga de la familia Buendía a lo largo de siete generaciones en el pueblo de Macondo.",
-        rutaImagen: "https://m.media-amazon.com/images/I/91TvVQS7loL._AC_UF1000,1000_QL80_.jpg",
-        precio: 2000,
-        unidades: 1
-    },
-    {
-        id: 3,
-        titulo: "Matar a un ruiseñor",
-        autor: "Harper Lee",
-        genero: "Novela, Ficción",
-        descripcion: "La historia de Atticus Finch y sus hijos mientras luchan contra el racismo en el sur de los Estados Unidos.",
-        rutaImagen: "https://m.media-amazon.com/images/I/51dxA6YXFzL._AC_UF1000,1000_QL80_.jpg",
-        precio: 2000,
-        unidades: 1
-    },
-    {
-        id: 4,
-        titulo: "1984",
-        autor: "George Orwell",
-        genero: "Novela, Ficción",
-        descripcion: "Una novela distópica que describe un mundo totalitario y vigilante.",
-        rutaImagen: "https://images.penguinrandomhouse.com/cover/9788418915093",
-        precio: 2000,
-        unidades: 1
-    },
-    {
-        id: 5,
-        titulo: "Orgullo y prejuicio",
-        autor: "Jane Austen",
-        genero: "Novela, Romance",
-        descripcion: "La historia de Elizabeth Bennet y su relación con el señor Darcy en la Inglaterra del siglo XIX.",
-        rutaImagen: "https://m.media-amazon.com/images/I/71wnBzT9WqL._AC_UF1000,1000_QL80_.jpg",
-        precio: 3000,
-        unidades: 1
-    },
-    {
-        id: 6,
-        titulo: "Don Quijote de la Mancha",
-        autor: "Miguel de Cervantes",
-        genero: "Clásico",
-        descripcion: "Las aventuras del caballero Don Quijote y su fiel escudero Sancho Panza en una sátira literaria.",
-        rutaImagen: "https://m.media-amazon.com/images/I/91zpNPYRFeL._AC_UF1000,1000_QL80_.jpg",
-        precio: 3000,
-        unidades: 1
-    },
-    {
-        id: 7,
-        titulo: "Los juegos del hambre",
-        autor: "Suzanne Collins",
-        genero: "Novela, Juvenil",
-        descripcion: "La historia de Katniss Everdeen en un mundo distópico donde jóvenes son forzados a luchar por su supervivencia en un juego mortal.",
-        rutaImagen: "https://m.media-amazon.com/images/I/51h3YpAz6rL._AC_UF1000,1000_QL80_.jpg",
-        precio: 1000,
-        unidades: 1
-    },
-    {
-        id: 8,
-        titulo: "Crónica de una muerte anunciada",
-        autor: "Gabriel García Márquez",
-        genero: "Novela, Policial",
-        descripcion: "La narración de un asesinato en una pequeña comunidad y la inevitabilidad del mismo.",
-        rutaImagen: "https://m.media-amazon.com/images/I/91BaE11qAgL._AC_UF1000,1000_QL80_.jpg",
-        precio: 1000,
-        unidades: 1
-    },
-    {
-        id: 9,
-        titulo: "Moby-Dick",
-        autor: "Herman Melville",
-        genero: "Novela, Ficción",
-        descripcion: "La obsesión del capitán Ahab por cazar al gran cachalote blanco conocido como Moby-Dick.",
-        rutaImagen: "https://m.media-amazon.com/images/I/81R91ODA9DL._AC_UF1000,1000_QL80_.jpg",
-        precio: 2000,
-        unidades: 1
-    }
-]
+    const productos = [
+        {
+            id: 1,
+            titulo: "El Gran Gatsby",
+            autor: "F. Scott Fitzgerald",
+            genero: "Novela, Ficción",
+            descripcion: "La historia del millonario Jay Gatsby y su obsesión por el pasado.",
+            rutaImagen: "https://m.media-amazon.com/images/I/61hR5wwWGuS._AC_UF1000,1000_QL80_.jpg",
+            precio: 2000,
+            unidades: 1
+        },
+        {
+            id: 2,
+            titulo: "Cien años de soledad",
+            autor: "Gabriel García Márquez",
+            genero: "Novela",
+            descripcion: "La saga de la familia Buendía a lo largo de siete generaciones en el pueblo de Macondo.",
+            rutaImagen: "https://m.media-amazon.com/images/I/91TvVQS7loL._AC_UF1000,1000_QL80_.jpg",
+            precio: 2000,
+            unidades: 1
+        },
+        {
+            id: 3,
+            titulo: "Matar a un ruiseñor",
+            autor: "Harper Lee",
+            genero: "Novela, Ficción",
+            descripcion: "La historia de Atticus Finch y sus hijos mientras luchan contra el racismo en el sur de los Estados Unidos.",
+            rutaImagen: "https://m.media-amazon.com/images/I/51dxA6YXFzL._AC_UF1000,1000_QL80_.jpg",
+            precio: 2000,
+            unidades: 1
+        },
+        {
+            id: 4,
+            titulo: "1984",
+            autor: "George Orwell",
+            genero: "Novela, Ficción",
+            descripcion: "Una novela distópica que describe un mundo totalitario y vigilante.",
+            rutaImagen: "https://images.penguinrandomhouse.com/cover/9788418915093",
+            precio: 2000,
+            unidades: 1
+        },
+        {
+            id: 5,
+            titulo: "Orgullo y prejuicio",
+            autor: "Jane Austen",
+            genero: "Novela, Romance",
+            descripcion: "La historia de Elizabeth Bennet y su relación con el señor Darcy en la Inglaterra del siglo XIX.",
+            rutaImagen: "https://m.media-amazon.com/images/I/71wnBzT9WqL._AC_UF1000,1000_QL80_.jpg",
+            precio: 3000,
+            unidades: 1
+        },
+        {
+            id: 6,
+            titulo: "Don Quijote de la Mancha",
+            autor: "Miguel de Cervantes",
+            genero: "Clásico",
+            descripcion: "Las aventuras del caballero Don Quijote y su fiel escudero Sancho Panza en una sátira literaria.",
+            rutaImagen: "https://m.media-amazon.com/images/I/91zpNPYRFeL._AC_UF1000,1000_QL80_.jpg",
+            precio: 3000,
+            unidades: 1
+        },
+        {
+            id: 7,
+            titulo: "Los juegos del hambre",
+            autor: "Suzanne Collins",
+            genero: "Novela, Juvenil",
+            descripcion: "La historia de Katniss Everdeen en un mundo distópico donde jóvenes son forzados a luchar por su supervivencia en un juego mortal.",
+            rutaImagen: "https://m.media-amazon.com/images/I/51h3YpAz6rL._AC_UF1000,1000_QL80_.jpg",
+            precio: 1000,
+            unidades: 1
+        },
+        {
+            id: 8,
+            titulo: "Crónica de una muerte anunciada",
+            autor: "Gabriel García Márquez",
+            genero: "Novela, Policial",
+            descripcion: "La narración de un asesinato en una pequeña comunidad y la inevitabilidad del mismo.",
+            rutaImagen: "https://m.media-amazon.com/images/I/91BaE11qAgL._AC_UF1000,1000_QL80_.jpg",
+            precio: 1000,
+            unidades: 1
+        },
+        {
+            id: 9,
+            titulo: "Moby-Dick",
+            autor: "Herman Melville",
+            genero: "Novela, Ficción",
+            descripcion: "La obsesión del capitán Ahab por cazar al gran cachalote blanco conocido como Moby-Dick.",
+            rutaImagen: "https://m.media-amazon.com/images/I/81R91ODA9DL._AC_UF1000,1000_QL80_.jpg",
+            precio: 2000,
+            unidades: 1
+        }
 
-let carrito = []
+    ]
+
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [] /* LS */
 
 productos.forEach((product) => {
     let content = document.createElement("div") /* creo cards de cada producto */
@@ -138,13 +140,28 @@ productos.forEach((product) => {
                 unidades: product.unidades,
 
             })
+
+            console.log(carrito)
+            console.log(carrito.length)
+            carritoCounter()
+            saveLocal()
         }
-        console.log(carrito)
-        carritoCounter()
-
     })
-
 })
+
+/* set item */
+const saveLocal = () => {
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+}
+
+/* get item */
+const loadLocal = () => {
+    const carritoString = localStorage.getItem("carrito");
+    if (carritoString) {
+        carrito = JSON.parse(carritoString);
+    }
+} 
+
 
 /* eventos boton carrito - mostrar contenido del carrito */
 const pintarCarrito = () => {
@@ -176,12 +193,30 @@ const pintarCarrito = () => {
                 <h1>${product.titulo}</h1>
                 <h2>${product.autor}</h2>
                 <p>${product.precio}</p>
+                <span class="restar"> - </span>
                 <p>Unidades: ${product.unidades}
+                <span class="sumar"> + </span> 
                 <p>Total: $${product.unidades * product.precio}</p>
                 `
 
+
         modalContainer.append(carritoContent)
-        console.log(carrito.length)
+        
+        let restar = carritoContent.querySelector(".restar")
+        restar.addEventListener("click", () => {
+            if(product.unidades !== 1) {
+           product.unidades--
+            }
+        saveLocal()
+           pintarCarrito()
+        })
+
+        let sumar = carritoContent.querySelector(".sumar")
+        sumar.addEventListener("click", () => {
+            product.unidades++
+            saveLocal()
+            pintarCarrito()
+        })
 
         // eliminar productos del carrito //
         let eliminar = document.createElement("span")
@@ -190,6 +225,7 @@ const pintarCarrito = () => {
         carritoContent.append(eliminar)
 
         eliminar.addEventListener("click", eliminarProducto)
+        eliminar.setAttribute("data-id", product.id) /* local storage */
 
 
     })
@@ -206,19 +242,26 @@ const pintarCarrito = () => {
 
 verCarrito.addEventListener("click", pintarCarrito)
 
-/* ojo con esta parte que no funciona bien */
-const eliminarProducto = () => {
-    const foundId = carrito.find((element) => element.id)
+const eliminarProducto = (event) => {
+    const productId = parseInt(event.target.dataset.id)
 
-    carrito = carrito.filter((carritoId) => {
-        return carritoId !== foundId
-    })
+    carrito = carrito.filter((product) => product.id !== productId)
 
     carritoCounter()
+    saveLocal()
     pintarCarrito()
 }
 
+/* local storage */
 const carritoCounter = () => {
     cantidadCarrito.style.display = "block"
-    cantidadCarrito.innerText = carrito.length
+
+    const carritoLength = carrito.length
+
+    localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
+
+
+    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"))
 }
+
+carritoCounter()
