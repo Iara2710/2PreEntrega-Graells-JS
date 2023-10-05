@@ -80,7 +80,7 @@ const cantidadCarrito = document.getElementById("cantidadCarrito")
             autor: "Gabriel García Márquez",
             genero: "Novela, Policial",
             descripcion: "La narración de un asesinato en una pequeña comunidad y la inevitabilidad del mismo.",
-            rutaImagen: "https://m.media-amazon.com/images/I/91BaE11qAgL._AC_UF1000,1000_QL80_.jpg",
+            rutaImagen: "https://images.cdn2.buscalibre.com/fit-in/360x360/13/97/1397a4f28df5ed21f99177884f3276bd.jpg",
             precio: 1000,
             unidades: 1
         },
@@ -192,7 +192,8 @@ const pintarCarrito = () => {
                 <img src="${product.rutaImagen}">
                 <h1>${product.titulo}</h1>
                 <h2>${product.autor}</h2>
-                <p>${product.precio}</p>
+                <p>${product.descripcion}</p>
+                <p>$${product.precio}</p>
                 <span class="restar"> - </span>
                 <p>Unidades: ${product.unidades}
                 <span class="sumar"> + </span> 
@@ -265,3 +266,8 @@ const carritoCounter = () => {
 }
 
 carritoCounter()
+
+/* falta agregar filtros
+agregar librerias
+ajax y fetch
+mejorar estilos */

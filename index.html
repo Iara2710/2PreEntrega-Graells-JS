@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- enlace iconos bootstrap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&family=Prompt:wght@200&display=swap" rel="stylesheet">
 
     <title>Rayuela Libros</title>
 </head>
@@ -14,11 +17,14 @@
 <body>
 
     <div class="nav-container">
+        
         <nav class="navbar">
-            <input id="buscador" placeholder="Título, autor, género">
-            <button id="botonBuscador">
-                <i class="bi bi-search"></i>
-            </button>
+            <div class="container">
+                <input id="buscador" class="buscador" placeholder="Título, autor, género">
+                <button id="botonBuscador">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
 
             <button id="botonCarrito">
                 <i class="bi bi-bag-fill" id="verCarrito">
@@ -28,16 +34,20 @@
         </nav>
     </div>
 
-    <div class="categorias">
-        <h1>Categorías</h1>
-        <button class="botonFiltro" value="novela">Novela</button>
-        <button class="botonFiltro" value="ficcion">Ficción</button>
-        <button class="botonFiltro" value="romance">Romance</button>
-        <button class="botonFiltro" value="juvenil">Juvenil</button>
-        <button class="botonFiltro" value="policial">Policial</button>
-        <button class="botonFiltro" value="aventura">Aventura</button>
-        <button class="botonFiltro" value="clasico">Clásicos</button>
-    </div>
+<div class="container">
+        <section class="categorias">
+            <h1 class="categorias-titulo">Categorías</h1>
+            <ul class="lista-categorias">
+                <li><button class="botonFiltro" value="novela">Novela</button></li>
+                <li><button class="botonFiltro" value="ficcion">Ficción</button></li>
+                <li><button class="botonFiltro" value="romance">Romance</button></li>
+                <li><button class="botonFiltro" value="juvenil">Juvenil</button></li>
+                <li><button class="botonFiltro" value="policial">Policial</button></li>
+                <li><button class="botonFiltro" value="aventura">Aventura</button></li>
+                <li><button class="botonFiltro" value="clasico">Clásicos</button></li>
+            </ul>
+        </section>
+    
 
     <!--shop content-->
     <div id="shopContent" class="shop-content"></div>
@@ -45,7 +55,7 @@
     <!--modal container-->
     <div id="modal-container" class="modal-container"></div>
 
-
+</div>
 
     <script src="./js/main.js"></script> <!-- enlace js -->
 
