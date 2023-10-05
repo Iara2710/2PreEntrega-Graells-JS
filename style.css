@@ -158,8 +158,7 @@ align-items: flex-start;
 }
 
 .modal-container::-webkit-scrollbar {
-  /*quitar barra de scroll
-  display: none; */
+  display: none;
 }
 
 .modal-header {

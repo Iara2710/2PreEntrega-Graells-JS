@@ -98,11 +98,11 @@ const cantidadCarrito = document.getElementById("cantidadCarrito")
     ]
 
 
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [] /* LS */
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [] // LS //
 
 productos.forEach((product) => {
-    let content = document.createElement("div") /* creo cards de cada producto */
-    content.className = "card" /*nombre de clase para css*/
+    let content = document.createElement("div") // creo cards de cada producto //
+    content.className = "card" //nombre de clase para css//
     content.innerHTML = `
     <img src="${product.rutaImagen}">
     <h1>${product.titulo}</h1>
@@ -112,15 +112,14 @@ productos.forEach((product) => {
 
     let comprar = document.createElement("button")
     comprar.innerText = "Agregar al carrito"
-    comprar.className = "comprar" /* nombre de clase para css */
+    comprar.className = "comprar" // nombre de clase para css //
 
-    content.append(comprar) /* agrego boton de "agregar al carrito" en cada card*/
+    content.append(comprar) // agrego boton de "agregar al carrito" en cada card //
 
-    /* Agrego funcionalidad del boton "agregar al carrito" --- eventos */
-    comprar.addEventListener("click", () => { /* lo que pasa al escuchar el click: */
+    // Agrego funcionalidad del boton "agregar al carrito" --- eventos //
+    comprar.addEventListener("click", () => { // lo que pasa al escuchar el click: //
 
-        const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id) /* busca productos repetidos dentro del carrito */
-        /* ojo que duplica productos del carrito --> revisar */
+        const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id) // busca productos repetidos dentro del carrito //
         if (repeat) {
             carrito.map((prod) => {
                 if (prod.id === product.id) {
@@ -129,7 +128,7 @@ productos.forEach((product) => {
             })
         } else {
 
-            carrito.push({ /*lo que quiero que pushee dentro del carrito */
+            carrito.push({ //lo que quiero que pushee dentro del carrito //
                 id: product.id,
                 rutaImagen: product.rutaImagen,
                 titulo: product.titulo,
@@ -146,15 +145,24 @@ productos.forEach((product) => {
             carritoCounter()
             saveLocal()
         }
+
+        // agrego toastify //
+        Toastify({
+            text: 'Libro agregado al carrito',
+            duration: 2000, 
+            gravity: 'bottom', 
+            position: 'right', 
+            backgroundColor: '#fcac14', 
+        }).showToast();
     })
 })
 
-/* set item */
+// set item //
 const saveLocal = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
 
-/* get item */
+// get item //
 const loadLocal = () => {
     const carritoString = localStorage.getItem("carrito");
     if (carritoString) {
@@ -163,12 +171,12 @@ const loadLocal = () => {
 } 
 
 
-/* eventos boton carrito - mostrar contenido del carrito */
+// eventos boton carrito - mostrar contenido del carrito //
 const pintarCarrito = () => {
-    modalContainer.innerHTML = "" /* para limpiar el carrito cuando se cierre y se vuelva a abrir// es para que no se repita el carrito */
+    modalContainer.innerHTML = "" // para limpiar el carrito cuando se cierre y se vuelva a abrir// es para que no se repita el carrito */
     modalContainer.style.display = "flex"
     const modalHeader = document.createElement("div")
-    modalHeader.className = "modalHeader" /* para los estilos */
+    modalHeader.className = "modalHeader" // para los estilos //
     modalHeader.innerHTML = `
                  <h1 class= "modal-header-title">Carrito</h1>
                  `
@@ -185,7 +193,7 @@ const pintarCarrito = () => {
     modalHeader.append(modalButton)
 
 
-    carrito.forEach((product) => { /* productos que elija el ususario*/
+    carrito.forEach((product) => { // productos que elija el ususario //
         let carritoContent = document.createElement("div")
         carritoContent.className = "modal-content"
         carritoContent.innerHTML = `
