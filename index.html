@@ -2,27 +2,27 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"> <!-- enlace toastify -->
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <!-- enlace toastify -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <!-- enlace iconos bootstrap -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&family=Prompt:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&family=Prompt:wght@200&display=swap"
+        rel="stylesheet" />
 
     <title>Rayuela Libros</title>
 </head>
 
 <body>
-
     <div class="nav-container">
-        
         <nav class="navbar">
-
             <div class="container">
-                <input id="buscador" class="buscador" placeholder="Título, autor, género">
+                <input id="buscador" class="buscador" placeholder="Título, autor, género" />
                 <button id="botonBuscador">
                     <i class="bi bi-search"></i>
                 </button>
@@ -36,35 +36,59 @@
         </nav>
     </div>
 
-<div class="container-cat">
+    <div class="container-cat">
         <section class="categorias">
             <h1 class="categorias-titulo">Categorías</h1>
             <ul class="lista-categorias">
-            
                 <li><button class="botonFiltro" value="todos">Todos</button></li>
                 <li><button class="botonFiltro" value="novela">Novela</button></li>
                 <li><button class="botonFiltro" value="ficcion">Ficción</button></li>
                 <li><button class="botonFiltro" value="romance">Romance</button></li>
                 <li><button class="botonFiltro" value="juvenil">Juvenil</button></li>
-                <li><button class="botonFiltro" value="policial">Policial</button></li>
-                <li><button class="botonFiltro" value="aventura">Aventura</button></li>
+                <li>
+                    <button class="botonFiltro" value="policial">Policial</button>
+                </li>
+                <li>
+                    <button class="botonFiltro" value="aventura">Aventura</button>
+                </li>
                 <li><button class="botonFiltro" value="clasico">Clásicos</button></li>
-                
             </ul>
         </section>
-    
 
-    <!--shop content-->
-    <div id="shopContent" class="shop-content"></div>
+        <!--shop content-->
+        <div id="shopContent" class="shop-content"></div>
 
-    <!--modal container-->
-    <div id="modal-container" class="modal-container"></div>
+        <!--modal container-->
+        <div id="modal-container" class="modal-container"></div>
+    </div>
 
-</div>
+    <!-- Botón "Finalizar Compra" -->
+    <button class="finalizar-compra-button">Finalizar Compra</button>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script> <!-- enlace toastify -->
-    <script src="./js/main.js"></script> <!-- enlace js -->
+    <!-- Modal de Formulario de Pago -->
+    <div id="modalPago" class="modal-pago">
+        <div class="modalPago-content">
+            <span class="modalPago-close-button">&times;</span>
+            <h2 class="form-pago">Detalles de Facturación</h2>
+            <form>
+                <!-- Campos del formulario de pago -->
+                <!-- Agrega aquí los campos para la tarjeta, nombre, fecha de vencimiento, etc. -->
+                <form class="form-pago">
+                    <input type="text" placeholder="Número de tarjeta" required title="Campo obligatorio: Número de tarjeta" />
+                    <input type="text" placeholder="Nombre en la tarjeta" required title="Campo obligatorio: Nombre en la tarjeta" />
+                    <input type="text" placeholder="Fecha de vencimiento" required title="Campo obligatorio: Fecha de vencimiento" />
+                    <input type="text" placeholder="Código de seguridad" required title="Campo obligatorio: Código de seguridad" />
+                    <button class="botonPagar" type="submit">Pagar</button>
+                </form>
+                
+            </form>
+        </div>
+    </div>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- enlace toastify -->
+    <script src="./js/main.js"></script>
+    <!-- enlace js -->
 </body>
 
 </html>

@@ -125,7 +125,7 @@ document.addEventListener("keyup", (e) => {
 
 // filtros
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const botonFiltros = document.querySelectorAll('.botonFiltro');
     const productos = document.querySelectorAll('.genero');
 
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //A PARTIR DE ACA NO FUNCIONA -- REVISAR
 
-   // Funcion para ocultar productos 
+// Funcion para ocultar productos 
 /*    function hideProducts() {
         const cards = document.querySelectorAll(".card");
         cards.forEach(function(card) {
@@ -357,13 +357,33 @@ const pintarCarrito = () => {
     totalCompra.innerHTML = `Total a pagar: $${total}`
     modalContainer.append(totalCompra)
 
-    // Agregar botón "Finalizar Compra" //
-    const finalizarCompraButton = document.createElement("button");
-    finalizarCompraButton.textContent = "Finalizar Compra";
-    finalizarCompraButton.className = "finalizar-compra-button";
-    modalContainer.appendChild(finalizarCompraButton);
+    // Botón "Finalizar Compra" //
+    const finalizarCompraButton = document.createElement("button")
+    finalizarCompraButton.textContent = "Finalizar Compra"
+    finalizarCompraButton.className = "finalizar-compra-button"
+    modalContainer.appendChild(finalizarCompraButton)
 
-}
+    const modalPago = document.getElementById("modalPago")
+
+    finalizarCompraButton.addEventListener("click", function () {
+        modalPago.style.display = "block"
+    });
+
+    const modalCloseButton = document.querySelector(".modalPago-close-button")
+    modalCloseButton.addEventListener("click", function () {
+        modalPago.style.display = "none"
+    })
+
+
+    finalizarCompraButton.addEventListener("click", function () {
+        modalContainer.style.display = "none"
+        modalPago.style.display = "block"
+    });
+
+};
+
+
+
 
 verCarrito.addEventListener("click", pintarCarrito)
 
@@ -390,6 +410,8 @@ const carritoCounter = () => {
 }
 
 carritoCounter()
+
+
 
 /* falta agregar filtros
 asincronia y promesas
