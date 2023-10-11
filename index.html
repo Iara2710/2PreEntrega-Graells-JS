@@ -60,29 +60,33 @@
 
         <!--modal container-->
         <div id="modal-container" class="modal-container"></div>
+
+ 
     </div>
 
-    <!-- Botón "Finalizar Compra" -->
-    <button class="finalizar-compra-button">Finalizar Compra</button>
+
 
     <!-- Modal de Formulario de Pago -->
     <div id="modalPago" class="modal-pago">
         <div class="modalPago-content">
             <span class="modalPago-close-button">&times;</span>
-            <h2 class="form-pago">Detalles de Facturación</h2>
+            <h2 class="form-pago">Formulario de pago</h2>
             <form>
-                <!-- Campos del formulario de pago -->
-                <!-- Agrega aquí los campos para la tarjeta, nombre, fecha de vencimiento, etc. -->
                 <form class="form-pago">
-                    <input type="text" placeholder="Número de tarjeta" required title="Campo obligatorio: Número de tarjeta" />
-                    <input type="text" placeholder="Nombre en la tarjeta" required title="Campo obligatorio: Nombre en la tarjeta" />
-                    <input type="text" placeholder="Fecha de vencimiento" required title="Campo obligatorio: Fecha de vencimiento" />
-                    <input type="text" placeholder="Código de seguridad" required title="Campo obligatorio: Código de seguridad" />
+                    <input type="tel" placeholder="Número de tarjeta" required
+                        title="Campo obligatorio: Número de tarjeta" />
+                    <input type="text" placeholder="Nombre en la tarjeta" required
+                        title="Campo obligatorio: Nombre en la tarjeta" />
+                    <input type="text" placeholder="Dirección" required
+                        title="Campo obligatorio: Fecha de vencimiento" />
+                    <input type="email" placeholder="Correo Electrónico" required
+                        title="Campo obligatorio: Código de seguridad" />
                     <button class="botonPagar" type="submit">Pagar</button>
                 </form>
-                
+
             </form>
         </div>
+
     </div>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

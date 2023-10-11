@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "titulo": "El Gran Gatsby",
+        "autor": "F. Scott Fitzgerald",
+        "genero": "Novela, Ficción",
+        "descripcion": "La historia del millonario Jay Gatsby y su obsesión por el pasado.",
+        "rutaImagen": "https://m.media-amazon.com/images/I/61hR5wwWGuS._AC_UF1000,1000_QL80_.jpg",
+        "precio": 2000,
+        "unidades": 1
+    },
+    {
+        "id": 2,
+        "titulo": "Cien años de soledad",
+        "autor": "Gabriel Garcia Marquez",
+        "genero": "Novela",
+        "descripcion": "La saga de la familia Buendía a lo largo de siete generaciones en el pueblo de Macondo.",
+        "rutaImagen": "https://m.media-amazon.com/images/I/91TvVQS7loL._AC_UF1000,1000_QL80_.jpg",
+        "precio": 2000,
+        "unidades": 1
+    },
+    {
+        "id": 3,
+        "titulo": "Matar a un ruiseñor",
+        "autor": "Harper Lee",
+        "genero": "Novela, Ficción",
+        "descripcion": "La historia de Atticus Finch y sus hijos mientras luchan contra el racismo en el sur de los Estados Unidos.",
+        "rutaImagen": "https://m.media-amazon.com/images/I/51dxA6YXFzL._AC_UF1000,1000_QL80_.jpg",
+        "precio": 2000,
+        "unidades": 1
+    },
+    {
+        "id": 4,
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "genero": "Novela, Ficción",
+        "descripcion": "Una novela distópica que describe un mundo totalitario y vigilante.",
+        "rutaImagen": "https://images.penguinrandomhouse.com/cover/9788418915093",
+        "precio": 2000,
+        "unidades": 1
+    },
+    {
+        "id": 5,
+        "titulo": "Orgullo y prejuicio",
+        "autor": "Jane Austen",
+        "genero": "Novela, Romance",
+        "descripcion": "La historia de Elizabeth Bennet y su relación con el señor Darcy en la Inglaterra del siglo XIX.",
+        "rutaImagen": "https://m.media-amazon.com/images/I/71wnBzT9WqL._AC_UF1000,1000_QL80_.jpg",
+        "precio": 3000,
+        "unidades": 1
+    },
+    {
+        "id": 6,
+        "titulo": "Don Quijote de la Mancha",
+        "autor": "Miguel de Cervantes",
+        "genero": "Clásico",
+        "descripcion": "Las aventuras del caballero Don Quijote y su fiel escudero Sancho Panza en una sátira literaria.",
+        "rutaImagen": "https://m.media-amazon.com/images/I/91zpNPYRFeL._AC_UF1000,1000_QL80_.jpg",
+        "precio": 3000,
+        "unidades": 1
+    },
+    {
+        "id": 7,
+        "titulo": "Los juegos del hambre",
+        "autor": "Suzanne Collins",
+        "genero": "Novela, Juvenil",
+        "descripcion": "La historia de Katniss Everdeen en un mundo distópico donde jóvenes son forzados a luchar por su supervivencia en un juego mortal.",
+        "rutaImagen": "https://m.media-amazon.com/images/I/51h3YpAz6rL._AC_UF1000,1000_QL80_.jpg",
+        "precio": 1000,
+        "unidades": 1
+    },
+    {
+        "id": 8,
+        "titulo": "Crónica de una muerte anunciada",
+        "autor": "Gabriel Garcia Marquez",
+        "genero": "Novela, Policial",
+        "descripcion": "La narración de un asesinato en una pequeña comunidad y la inevitabilidad del mismo.",
+        "rutaImagen": "https://images.cdn2.buscalibre.com/fit-in/360x360/13/97/1397a4f28df5ed21f99177884f3276bd.jpg",
+        "precio": 1000,
+        "unidades": 1
+    },
+    {
+        "id": 9,
+        "titulo": "Moby-Dick",
+        "autor": "Herman Melville",
+        "genero": "Novela, Ficción",
+        "descripcion": "La obsesión del capitán Ahab por cazar al gran cachalote blanco conocido como Moby-Dick.",
+        "rutaImagen": "https://m.media-amazon.com/images/I/81R91ODA9DL._AC_UF1000,1000_QL80_.jpg",
+        "precio": 2000,
+        "unidades": 1
+    }
+
+]
