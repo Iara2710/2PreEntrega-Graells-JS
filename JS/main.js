@@ -24,73 +24,31 @@ document.addEventListener("keyup", (e) => {
     }
 });
 
+//  filtros - botones
+const botonesFiltro = document.querySelectorAll(".botonFiltro")
 
+botonesFiltro.forEach((boton) => {
+    boton.addEventListener("click", () => {
+        const categoriaSeleccionada = boton.value
+        filterBooksByCategory(categoriaSeleccionada)
+    })
+})
 
-// filtros-botones
+// Función para filtrar libros por categoría
+function filterBooksByCategory(categoria) {
+    const cards = document.querySelectorAll(".card")
 
-document.addEventListener("DOMContentLoaded", function () {
-    const botonFiltros = document.querySelectorAll('.botonFiltro')
-    const productos = document.querySelectorAll('.genero')
+    cards.forEach((card) => {
+        const cardCategoria = card.querySelector(".genero").textContent.toLowerCase()
 
-    const categoriasAGeneros = {
-        "todos": "todos",
-        "novela": "Novela",
-        "ficcion": "Ficción",
-        "romance": "Romance",
-        "juvenil": "Juvenil",
-        "policial": "Policial",
-        "aventura": "Aventura",
-        "clasico": "Clásico"
-    };
+        if (categoria === "todos" || cardCategoria.includes(categoria.toLowerCase())) {
+            card.style.display = "block"
+        } else {
+            card.style.display = "none"
+        }
+    })
+}
 
-    // Agrega la clase 'todos' al botón de filtro "Todos"
-    document.querySelector('.botonFiltro[value="todos"]').classList.add('todos')
-});
-
-//A PARTIR DE ACA NO FUNCIONA -- REVISAR
-
-// Funcion para ocultar productos 
-  /*  function hideProducts() {
-        const cards = document.querySelectorAll(".card");
-        cards.forEach(function(card) {
-            card.style.transform = 'scale(0)';
-            setTimeout(function() {
-                card.style.display = 'none';
-            }, 400);
-        });
-    } 
-   
-  
-    botonFiltros.forEach(function (boton) {
-        boton.addEventListener("click", function () {
-            const catProduct = this.getAttribute("value");
-
-            // Remueve la clase 'todos' de todos los botones de filtro
-            botonFiltros.forEach(function (boton) {
-                boton.classList.remove("todos");
-            });
-
-            this.classList.add("todos");
-
-            // Muestra los libros que coinciden con la categoría seleccionada
-            showProducts(catProduct);
-        });
-    });
-
-      function showProducts(catProduct) {
-        productos.forEach(function (producto) {
-            const genero = producto.genero.toLowerCase();
-
-            // Comprueba si el género del libro coincide con la categoría seleccionada o si es "todos"
-            if (catProduct === "todos" || genero.includes(catProduct)) {
-                producto.style.display = "block";
-                // Puedes aplicar aquí cualquier animación o estilo adicional si lo deseas
-            } else {
-                producto.style.display = "none";
-            }
-        });
-    }
-*/
     
 
 const getProducts = async ()=> {
@@ -101,7 +59,7 @@ data.forEach((product) => {
     let content = document.createElement("div") // creo cards de cada producto //
     content.className = "card" //nombre de clase para css//
     content.innerHTML = `
-    <img src="${product.rutaImagen}">
+    <img src="${product.rutaImagen}" alt="${product.titulo}">
     <h1>${product.titulo}</h1>
     <p class="price">$${product.precio}</p> 
     <div class="hidden-details"> 
@@ -113,12 +71,12 @@ data.forEach((product) => {
 
     let comprar = document.createElement("button")
     comprar.innerText = "Agregar al carrito"
-    comprar.className = "comprar" // nombre de clase para css //
+    comprar.className = "comprar"
 
     content.append(comprar) // agrego boton de "agregar al carrito" en cada card //
 
     // Agrego funcionalidad del boton "agregar al carrito" --- eventos //
-    comprar.addEventListener("click", () => { // lo que pasa al escuchar el click: //
+    comprar.addEventListener("click", () => {
 
         const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id) // busca productos repetidos dentro del carrito //
         if (repeat) {
@@ -129,7 +87,7 @@ data.forEach((product) => {
             })
         } else {
 
-            carrito.push({ //lo que quiero que pushee dentro del carrito //
+            carrito.push({ 
                 id: product.id,
                 rutaImagen: product.rutaImagen,
                 titulo: product.titulo,
@@ -178,10 +136,10 @@ const loadLocal = () => {
 
 // eventos boton carrito - mostrar contenido del carrito //
 const pintarCarrito = () => {
-    modalContainer.innerHTML = "" // para limpiar el carrito cuando se cierre y se vuelva a abrir// es para que no se repita el carrito */
+    modalContainer.innerHTML = "" // para limpiar el carrito cuando se cierre y se vuelva a abrir // para que no se repita el carrito */
     modalContainer.style.display = "flex"
     const modalHeader = document.createElement("div")
-    modalHeader.className = "modalHeader" // para los estilos //
+    modalHeader.className = "modalHeader" 
     modalHeader.innerHTML = `
                  <h1 class= "modal-header-title">Tu Carrito</h1>
                  `
@@ -243,7 +201,7 @@ const pintarCarrito = () => {
         carritoContent.append(eliminar)
 
         eliminar.addEventListener("click", eliminarProducto)
-        eliminar.setAttribute("data-id", product.id) /* local storage */
+        eliminar.setAttribute("data-id", product.id) // local storage //
 
 
     })
@@ -296,7 +254,7 @@ const eliminarProducto = (event) => {
     pintarCarrito()
 }
 
-/* local storage */
+// local storage //
 const carritoCounter = () => {
     cantidadCarrito.style.display = "block"
 
@@ -309,10 +267,3 @@ const carritoCounter = () => {
 }
 
 carritoCounter()
-
-
-
-/* falta agregar filtros
-asincronia y promesas
-ajax y fetch
-mejorar estilos */
