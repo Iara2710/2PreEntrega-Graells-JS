@@ -88,6 +88,36 @@
         "rutaImagen": "https://m.media-amazon.com/images/I/81R91ODA9DL._AC_UF1000,1000_QL80_.jpg",
         "precio": 2000,
         "unidades": 1
+    },
+    {
+        "id": 10,
+        "titulo": "La vuelta al mundo en 80 dias",
+        "autor": "Julio Verne",
+        "genero": "Aventura",
+        "descripcion": "Un intrépido caballero británico apuesta que puede dar la vuelta al mundo en 80 días para ganar una apuesta audaz mientras enfrenta desafíos y aventuras.",
+        "rutaImagen": "https://tienda.planetadelibros.com.ar/cdn/shop/files/portada_la-vuelta-al-mundo-en-ochenta-dias_jules-verne_202209011549.jpg?v=1694547809",
+        "precio": 3000,
+        "unidades": 1
+    },
+    {
+        "id": 11,
+        "titulo": "Harry Potter y La piedra filosofal",
+        "autor": "J.K Rowling",
+        "genero": "Aventura, Juvenil",
+        "descripcion": "Un joven mago descubre su destino en Hogwarts y lucha contra las fuerzas oscuras en su búsqueda de la Piedra Filosofal.",
+        "rutaImagen": "https://images.cdn3.buscalibre.com/fit-in/360x360/ce/e6/cee6ef96dad70d3f599b953f0e50afc7.jpg",
+        "precio": 4000,
+        "unidades": 1
+    },
+    {
+        "id": 12,
+        "titulo": "Los hombres que no amaban a las mujeres",
+        "autor": "Stieg Larsson",
+        "genero": "Novela, Policial",
+        "descripcion": "Un periodista y una investigadora resuelven un oscuro misterio familiar mientras destapan secretos impactantes en esta novela de suspense.",
+        "rutaImagen": "https://www.planetadelibros.com.ar/usuaris/libros/fotos/48/m_libros/portada_los-hombres-que-no-amaban-a-las-mujeres-serie-millennium-1_stieg-larsson_201507291602.jpg",
+        "precio": 3000,
+        "unidades": 1
     }
 
 ]
